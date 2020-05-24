@@ -1,2 +1,0 @@
-# FrontDoorCDN
-FrontDoorCDN
