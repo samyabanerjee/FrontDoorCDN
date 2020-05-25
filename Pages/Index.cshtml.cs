@@ -9,16 +9,18 @@ using System.Web;
 
 namespace FrontDoorCDN.Pages
 {
-    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true, Duration=0)]
+    [ResponseCache(Duration=0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
-        
+        public DateTime myDate;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
-            _logger = logger;
+           
+           myDate = System.DateTime.Now;
+           _logger = logger;
         }
 
         public void OnGet()
