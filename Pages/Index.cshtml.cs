@@ -9,7 +9,7 @@ using System.Web;
 
 namespace FrontDoorCDN.Pages
 {
-    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true, Duration=0)]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
