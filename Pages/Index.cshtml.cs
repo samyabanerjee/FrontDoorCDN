@@ -8,7 +8,9 @@ using Microsoft.Extensions.Logging;
 using System.Web;
 
 namespace FrontDoorCDN.Pages
-{    public class IndexModel : PageModel
+{    
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
 
